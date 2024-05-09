@@ -6,6 +6,11 @@ import createContactPage from "./contact";
 const createTabs = () => {
     const content = document.querySelector("#content");
 
+    const btnContainer = document.createElement("div");
+    btnContainer.classList.add("btnContainer");
+    content.appendChild(btnContainer);
+
+
     // Create the 3 divs
     const div1 = document.createElement("div");
     const div2 = document.createElement("div");
@@ -27,9 +32,9 @@ const createTabs = () => {
     div3.textContent = "Contact";
 
     // Append the divs to the content div
-    content.appendChild(div1);
-    content.appendChild(div2);
-    content.appendChild(div3);
+    btnContainer.appendChild(div1);
+    btnContainer.appendChild(div2);
+    btnContainer.appendChild(div3);
 
     div1.addEventListener("click", () => {
         clearContent();
